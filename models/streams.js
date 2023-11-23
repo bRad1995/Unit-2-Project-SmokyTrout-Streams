@@ -6,7 +6,7 @@ const streamSchema = new mongoose.Schema({
     fishing_quality: {type: String, required: true},
     accessibility: {type: String, required: true},
     recommended_flies: {type: String, required: true},
-    discription: {type: String, required: true}
+    about_this_stream: {type: String, required: true}
 })
 
 const Stream = mongoose.model('Stream', streamSchema)
