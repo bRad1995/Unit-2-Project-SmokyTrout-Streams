@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Stream Info</title>
+</head>
+<body>
+    <h2>Edit Stream</h2>
+    <form action="'/smokytrout/<%=stream.id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=stream.name%>"/> </br>
+        <br>
+        Location: <input type="text" name="location" value="<%=stream.location%>"/> </br>
+        <br>
+        Fishing Quality: <input type="text" name="fishing_quality" value="<%=stream.fishing_quality%>"/> </br>
+        <br>
+        Accessibility: <input type="text" name="accessibility" value="<%=stream.accessibility%>"/> </br>
+        <br>
+        Recommended Fly Patterns: <input type="text" name="recommended_flies" value="<%=stream.recommended_flies%>"/> </br>
+        <br>
+        <br>
+        About This Stream: <input type="text" name="about_this_stream" value="<%=stream.about_this_stream%>"/> </br>
+        <br>
+        <input type="submit" name="" value="Update Stream"/>
+
+    </form>
+    
+</body>
+</html>

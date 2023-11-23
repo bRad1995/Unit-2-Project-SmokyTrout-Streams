@@ -53,6 +53,15 @@ app.post('/smokytrout', (req, res) => {
     })
 })
 
+//EDIT
+app.get('/smokytrout/:id/edit', (req, res) => {
+    Stream.findById(req.params.id, (error, selectedStream) =>{
+        res.render('edit.ejs', {
+            stream : selectedStream
+        })
+    })
+})
+
 //SHOW
 app.get('/smokytrout/:id', (req, res) => {
     Stream.findById(req.params.id, (error, selectedStream) =>{
