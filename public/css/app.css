@@ -1,0 +1,15 @@
+#index-header{
+    text-align: center;
+}
+
+.listedStreams{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 3%;
+    text-align: center;
+}
+
+.index-stream-name{
+    display: flex;
+    align-items: center;
+}

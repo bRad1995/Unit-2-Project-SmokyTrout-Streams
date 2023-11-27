@@ -7,13 +7,15 @@
 
 <body>
 
-    <h1>SMOKY-TROUT STREAMS</h1>
+    <h1 id="index-header">SMOKY-TROUT STREAMS</h1>
 
-    <ul>
+    <ul class="listedStreams">
         <% for(let i=0; i < streams.length; i++){ %>
             <li>
                 <a href="/smokytrout/<%=streams[i].id; %>">
+                <div class="index-stream-name"> 
                     <%=streams[i].name;%>
+                </div>
                 </a></br> 
                 <br>
                 <a href ="/smokytrout/<%=streams[i].id%>/edit">UPDATE STREAM INFO</a>
