@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 const Stream = require('../Unit-2-Project-SmokyTrout-Streams/models/streams.js')
 
+//DATABASE CONNECTION
 mongoose.connect('mongodb://127.0.0.1:27017/smokytrout')
 mongoose.connection.once('open', () => {
     console.log('connected to mongo')
@@ -10,6 +12,8 @@ mongoose.connection.once('open', () => {
 
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
+app.use(express.static('public'))
 
 //SEED
 app.get('/smokytrout/seed', (req, res) => {
@@ -39,6 +43,20 @@ app.get('/smokytrout', (req, res) => {
 //NEW
 app.get('/smokytrout/new', (req, res) => {
     res.render('new.ejs')
+})
+
+//DELETE
+app.delete('/smokytrout/:id', (req, res) => {
+    Stream.findByIdAndRemove(req.params.id, (error, data) => {
+        res.redirect('/smokytrout')
+    })
+})
+
+//UPDATE
+app.put('/smokytrout/:id', (req, res) =>{
+    Stream.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedStream) => {
+        res.redirect('/smokytrout')
+    })
 })
 
 //CREATE

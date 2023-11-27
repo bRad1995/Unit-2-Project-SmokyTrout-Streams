@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+   <%- include ('./partials/head.ejs') %>
+    <title>Smoky-Trout Streams</title>
 </head>
 
 <body>
@@ -15,15 +14,13 @@
             <li>
                 <a href="/smokytrout/<%=streams[i].id; %>">
                     <%=streams[i].name;%>
-                </a></br>
+                </a></br> 
                 <br>
-                <a href="/smokytrout/<%=streams[i].id%>/edit">UPDATE STREAM INFO</a></br>
-                <br>
-                <br>
+                <a href ="/smokytrout/<%=streams[i].id%>/edit">UPDATE STREAM INFO</a>
             </li>
-
-      <% } %>
-            
+            <br>
+            <br>
+      <% } %>        
     </ul>
 
     <nav>
