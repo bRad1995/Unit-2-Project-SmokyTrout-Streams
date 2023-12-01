@@ -20,7 +20,7 @@ router.get('/seed', (req, res) => {
 //ROUTES (I.N.D.U.C.E.S)
 
 //INDEX
-router.get('/', (req, res) => {
+router.get('', (req, res) => {
     Stream.find({}, (error, allStreams) => {
         res.render('index.ejs', {
             streams: allStreams
