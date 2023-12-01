@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const streamsController = require('./controllers/streams-router.js')
 const mongoURI = process.env.mongoURI
+const PORT = process.env.PORT || 3000
 
 //DATABASE CONNECTION
 mongoose.connect(mongoURI + 'smokytrout')
@@ -20,6 +21,6 @@ app.use('/smokytrout', streamsController)
 
 
 //PORT
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening on port 3000')
 })
