@@ -1,15 +1,99 @@
-#index-header{
-    text-align: center;
+body{
+    background-image: url('https://res.cloudinary.com/dovqwfl1u/image/upload/v1701218692/smoky_mountain_stream_background_iqx7tl.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Slab', serif;
 }
 
-.listedStreams{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 3%;
+.index-header{
     text-align: center;
+    font-size: 50px;
+    color: antiquewhite;
+    text-shadow: 4px 4px 4px #000000;
+}
+
+.indexImage{
+    background-size: cover;
+    margin: 10px;
+    height: 40vh;
+    width: 50vh;
+    box-shadow: 4px 4px 4px #000000;
+}
+
+h3{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .index-stream-name{
     display: flex;
+    font-size: 20px;
     align-items: center;
+    position:absolute;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding: 0px 60px 0px 10px;
+    background: lightslategray;
+    color: antiquewhite;
+    text-shadow: 4px 4px 4px #000000;
+    opacity: 0.8;
+}
+
+.aboutInput{
+    padding: 50px;
+}
+
+.imgShow{
+    max-width: 450px;
+    height: 350px;
+    box-shadow: 4px 4px 4px #000000;
+}
+
+.listedStreams{
+    text-align: center;
+    display: grid;
+    margin:0;
+    padding:0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0%;
+    list-style-type: none;
+    font-size: 20px;
+    color: antiquewhite;
+    position: relative;
+}
+
+.addNewStream{
+    color: antiquewhite;
+    font-size: 30px;
+    text-shadow: 4px 4px 4px #000000;
+}
+
+a {
+    color: antiquewhite;
+}
+
+a:visited {text-decoration: none; color: antiquewhite; }
+
+.showBody {
+    color: antiquewhite;
+}
+
+.newBody {
+    color: antiquewhite;
+}
+
+.editBody{
+    color: antiquewhite
+}
+
+footer{
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 10px;
+    text-shadow: 4px 4px 4px #000000;
+
 }

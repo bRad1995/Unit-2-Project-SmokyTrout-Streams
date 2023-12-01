@@ -5,6 +5,12 @@
     <title><%=stream.name%></title>
 </head>
 <body>
+    <style>
+        body {
+            color: antiquewhite;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
     <h1><%=stream.name%></h1>
 
     Location: <%=stream.location%> </br>
@@ -20,14 +26,24 @@
     <br>
     <%=stream.about_this_stream%> </br>
     <br>
+    <div class="showImg">
+    <img class="imgShow" src="<%=stream.imgOne%>">
+    <img class="imgShow" src="<%=stream.imgTwo%>">
+    <img class="imgShow" src="<%=stream.imgThree%>"> </br>
+    </div>
+    <br>
     <form action="/smokytrout/<%=stream.id%>?_method=DELETE" method="POST">
-        
+        <a href ="/smokytrout/<%=stream.id%>/edit">UPDATE STREAM INFO</a></br>
+        <br>
         <input type="submit" value="DELETE"/>
     </form> </br>
     <br>
     <nav>
         <a href="/smokytrout">BACK TO HOMEPAGE</a>
     </nav>
-  
+  <br>
+  <footer>
+    <%- include ('./partials/footer.ejs') %>
+  </footer>
 </body>
 </html>

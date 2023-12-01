@@ -6,6 +6,7 @@
 </head>
 <body>
     <h2>Edit Stream</h2>
+    <div class="editBody">
     <form action="/smokytrout/<%=stream.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=stream.name%>"/> </br>
         <br>
@@ -18,11 +19,24 @@
         Recommended Fly Patterns: <input type="text" name="recommended_flies" value="<%=stream.recommended_flies%>"/> </br>
         <br>
         <br>
-        About This Stream: <input type="text" name="about_this_stream" value="<%=stream.about_this_stream%>"/> </br>
+        About This Stream: <textarea type="textarea" class="aboutInput" name="about_this_stream" value="<%=stream.about_this_stream%>"></textarea> </br>
+        <br>
+        ImgIndex: <input type="url" name="imgIndex" value="<%=stream.imgIndex%>"/> <br/>
+        <br>
+        ImgOne: <input type="url" name="imgOne" value="<%=stream.imgOne%>"/> <br/>
+        <br>
+        ImgTwo: <input type="url" name="imgTwo" value="<%=stream.imgTwo%>"/> <br/>
+        <br>
+        ImgThree: <input type="url" name="imgThree" value="<%=stream.imgThree%>"/> <br/>
         <br>
         <input type="submit" name="" value="Update Stream"/>
 
     </form>
-    
+</div>
+<br>
+<br>
+<footer>
+    <%- include ('./partials/footer.ejs') %>
+</footer>
 </body>
 </html>

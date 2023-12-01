@@ -6,28 +6,39 @@
 </head>
 
 <body>
-
-    <h1 id="index-header">SMOKY-TROUT STREAMS</h1>
+    <h1 class="index-header">SMOKY-TROUT STREAMS</h1>
 
     <ul class="listedStreams">
         <% for(let i=0; i < streams.length; i++){ %>
             <li>
                 <a href="/smokytrout/<%=streams[i].id; %>">
                 <div class="index-stream-name"> 
-                    <%=streams[i].name;%>
+                    <h3><%=streams[i].name;%></h3>
                 </div>
-                </a></br> 
-                <br>
-                <a href ="/smokytrout/<%=streams[i].id%>/edit">UPDATE STREAM INFO</a>
+                <div class="indexImage" style="background-image: url('<%=streams[i].imgIndex%>');">
+                </div>
+                </a>
             </li>
-            <br>
-            <br>
+           
       <% } %>        
     </ul>
-
+    <br>
     <nav>
+        <div class="addNewStream">
         <a href="/smokytrout/new">Add New GSMNP Stream</a>
+        </div>
     </nav>
-    
+    <br>
+    <br>
+    <br>
+    <footer>
+        <h3>Additonal Resources</h3>
+    <a href="https://www.nps.gov/grsm/planyourvisit/fishing.htm">GSMNP National Park Service</a>
+    <br>
+    <a href="https://www.tn.gov/twra/fishing/trout-information-stockings.html">TN.gov/fishing</a>
+       <%- include ('./partials/footer.ejs') %>
+       <br>
+       <br>
+    </footer>
 </body>
 </html>

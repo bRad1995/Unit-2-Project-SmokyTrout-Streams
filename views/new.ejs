@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Add A Stream</h2>
-
+    <div class="newBody">
     <form action="/smokytrout" method="POST">
         Name: <input type="text" name="name"/> </br>
         <br>
@@ -18,11 +18,24 @@
         <br>
         Recommended Flies: <input type="text" name="recommended_flies"/> </br>
         <br>
-        About This Stream: <input type="text" name="about_this_stream"/> <br/>
+        About This Stream: <textarea type="textarea" class="aboutInput" name="about_this_stream"></textarea> <br/>
         <br>
+        <br>
+        ImgIndex: <input type="url" name="imgIndex"/> <br/>
+        <br>
+        ImgOne: <input type="url" name="imgOne"/> <br/>
+        <br>
+        ImgTwo: <input type="url" name="imgTwo"/> <br/>
+        <br>
+        ImgThree: <input type="url" name="imgThree"/> <br/>
         <br>
         <input type="submit" name="" value="ADD STREAM"/>
     </form>
-
+</div>
+<br>
+<br>
+<footer>
+    <%- include ('./partials/footer.ejs') %>
+</footer>
 </body>
 </html>
