@@ -3,7 +3,7 @@ const router = express.Router()
 const Stream = require('../models/streams.js')
 
 //SEED
-router.get('/smokytrout/seed', (req, res) => {
+router.get('//seed', (req, res) => {
     Stream.create([
         {
             name: 'Meigs Creek',
@@ -20,7 +20,7 @@ router.get('/smokytrout/seed', (req, res) => {
 //ROUTES (I.N.D.U.C.E.S)
 
 //INDEX
-router.get('/smokytrout', (req, res) => {
+router.get('/', (req, res) => {
     Stream.find({}, (error, allStreams) => {
         res.render('index.ejs', {
             streams: allStreams
@@ -29,26 +29,26 @@ router.get('/smokytrout', (req, res) => {
 })
 
 //NEW
-router.get('/smokytrout/new', (req, res) => {
+router.get('//new', (req, res) => {
     res.render('new.ejs')
 })
 
 //DELETE
-router.delete('/smokytrout/:id', (req, res) => {
+router.delete('//:id', (req, res) => {
     Stream.findByIdAndRemove(req.params.id, (error, data) => {
         res.redirect('/smokytrout')
     })
 })
 
 //UPDATE
-router.put('/smokytrout/:id', (req, res) => {
+router.put('//:id', (req, res) => {
     Stream.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedStream) => {
         res.redirect('/smokytrout')
     })
 })
 
 //CREATE
-router.post('/smokytrout', (req, res) => {
+router.post('/', (req, res) => {
     Stream.create(req.body, (error, createdStream) => {
         if (error) {
             console.log(error)
@@ -60,7 +60,7 @@ router.post('/smokytrout', (req, res) => {
 })
 
 //EDIT
-router.get('/smokytrout/:id/edit', (req, res) => {
+router.get('//:id/edit', (req, res) => {
     Stream.findById(req.params.id, (error, selectedStream) => {
         res.render('edit.ejs', {
             stream: selectedStream
@@ -69,7 +69,7 @@ router.get('/smokytrout/:id/edit', (req, res) => {
 })
 
 //SHOW
-router.get('/smokytrout/:id', (req, res) => {
+router.get('//:id', (req, res) => {
     Stream.findById(req.params.id, (error, selectedStream) => {
         res.render('show.ejs', {
             stream: selectedStream
