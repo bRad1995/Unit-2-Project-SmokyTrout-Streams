@@ -10,7 +10,12 @@ Technologies Used: NodeJS, Express, MongoDB, JavaScript, HTML, CSS
 
 Link: https://smoky-trout-streamsgsmnp.onrender.com
 
-The application is a full CRUD application with seven RESTFUL Routes that allow the user to: create, delete, edit, and update streams. MongoDB provides the database structure for all information pertaining to the streams. 
+The application is a full CRUD application with seven RESTFUL Routes that allow the user to: create, delete, edit, and update streams. MongoDB provides the database structure for all information pertaining to the streams.
+
+Wireframes:
+![image](https://github.com/bRad1995/Unit-2-Project-SmokyTrout-Streams/assets/142275327/0e88447a-b64b-4745-b9aa-be15b453022f)
+
+![image](https://github.com/bRad1995/Unit-2-Project-SmokyTrout-Streams/assets/142275327/756f5d7b-2c3a-4850-9d9b-710b1a28057a)
 
 Future Enhancements:
 
