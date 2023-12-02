@@ -4,7 +4,7 @@ Smoky-Trout Streams
 
 Smoky-Trout Streams is a full stack web application designed to provide users information about specific trout streams within the Great Smoky Mountians National Park. The app provides basic, but essential information for any angler that wishes to explore these waters, such as: location, accesibility, fishing quality, and a short description. 
 
-![image](https://github.com/bRad1995/Unit-2-Project-SmokyTrout-Streams/assets/142275327/5528f0c9-da18-49ad-b0fd-4ecae2523839)
+![image](https://github.com/bRad1995/Unit-2-Project-SmokyTrout-Streams/assets/142275327/5858a319-a342-4fd7-add8-3319556f94c0)
 
 Technologies Used:
 
