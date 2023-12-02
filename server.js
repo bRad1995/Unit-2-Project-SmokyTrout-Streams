@@ -18,7 +18,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use('/smokytrout', streamsController)
-
+app.get('/', (req, res) => {
+    res.redirect('/smokytrout')
+})
 
 //PORT
 app.listen(PORT, () => {
