@@ -6,21 +6,11 @@ Smoky-Trout Streams is a full stack web application designed to provide users in
 
 ![image](https://github.com/bRad1995/Unit-2-Project-SmokyTrout-Streams/assets/142275327/5858a319-a342-4fd7-add8-3319556f94c0)
 
-Technologies Used:
-
-NodeJS
-Express
-MongoDB
-JavaScript
-HTML
-CSS
+Technologies Used: NodeJS, Express, MongoDB, JavaScript, HTML, CSS
 
 Link: https://smoky-trout-streamsgsmnp.onrender.com
 
 The application is a full CRUD application with seven RESTFUL Routes that allow the user to: create, delete, edit, and update streams. MongoDB provides the database structure for all information pertaining to the streams. 
-
-
-
 
 Future Enhancements:
 
